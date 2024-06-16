@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8707f648-85bc-4ffb-a05d-6c85d76a65bb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -71,6 +74,9 @@
       <workItem from="1718460155928" duration="14316000" />
       <workItem from="1718478128518" duration="6953000" />
       <workItem from="1718515389293" duration="3661000" />
+      <workItem from="1718545839428" duration="256000" />
+      <workItem from="1718546769867" duration="745000" />
+      <workItem from="1718548600002" duration="141000" />
     </task>
     <servers />
   </component>
