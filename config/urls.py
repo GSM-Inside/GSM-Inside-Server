@@ -24,4 +24,5 @@ urlpatterns = [
 
     path(BASE_URL+'post/', include('post.urls')),
     path(BASE_URL+'gallery/', include('gallery.urls')),
+    path(BASE_URL+'comment/', include('comment.urls')),
 ]

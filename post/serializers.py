@@ -23,7 +23,7 @@ class PostSerializer(serializers.ModelSerializer):
             'like': {'read_only': True},
             'dislike': {'read_only': True},
             'is_admin': {'read_only': True},
-            'password': {'write_only': True},
+            'password': {'write_only': True, 'min_length': 4},
             'date': {'read_only': True},
         }
 
@@ -56,4 +56,4 @@ class PostSerializer(serializers.ModelSerializer):
 class PostTitleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ['id', 'title', 'gallery', 'like']
+        fields = ('id', 'title', 'gallery', 'like')

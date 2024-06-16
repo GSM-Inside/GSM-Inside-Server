@@ -15,8 +15,6 @@ class PostView(APIView):
         if pk:
             serializer = PostSerializer(instance=get_object_or_404(Post, pk=pk))
         elif query:
-            print('test')
-            print(Post.objects.filter(gallery=query))
             serializer = PostTitleSerializer(instance=Post.objects.filter(gallery=query), many=True)
         else:
             serializer = PostTitleSerializer(instance=Post.objects.order_by('-date'), many=True)
@@ -32,7 +30,7 @@ class PostView(APIView):
         obj = get_object_or_404(Post, pk=pk)
         password = request.data.get('password')
         if not password == obj.password:
-            return Response({'msg':'Invalid password'}, status=status.HTTP_403_FORBIDDEN)
+            return Response({'msg': 'Invalid password'}, status=status.HTTP_403_FORBIDDEN)
 
         serializer = PostSerializer(obj, data=request.data)
         serializer.is_valid(raise_exception=True)

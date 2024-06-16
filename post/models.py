@@ -11,7 +11,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     name = models.CharField(max_length=20)
-    password = models.CharField(max_length=30)
+    password = models.CharField(max_length=50)
     like = models.IntegerField(default=0)
     dislike = models.IntegerField(default=0)
     date = models.DateTimeField(auto_now_add=True)

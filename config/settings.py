@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'post',
     'common',
-    'gallery'
+    'gallery',
+    'comment'
 ]
 
 MIDDLEWARE = [
