@@ -29,8 +29,6 @@ class ImageView(APIView):
         if image.size > 5 * 1024 * 1024:
             return Response({'msg':'Image too large'}, status=status.HTTP_400_BAD_REQUEST)
 
-
-
         try:
             path = f'{uuid.uuid4()}{extension}'
             join_path = os.path.join(settings.MEDIA_ROOT, path)
