@@ -5,6 +5,7 @@ from post.models import Post
 from .serializers import *
 from .models import *
 
+
 # Create your views here.
 class GalleryView(APIView):
     def get(self, request: object) -> Response:

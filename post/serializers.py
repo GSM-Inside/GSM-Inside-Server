@@ -13,6 +13,7 @@ class ImageSerializer(serializers.ModelSerializer):
             'post': {'required': False}
         }
 
+
 class PostSerializer(serializers.ModelSerializer):
     images = ImageSerializer(many=True, required=False)
     class Meta:

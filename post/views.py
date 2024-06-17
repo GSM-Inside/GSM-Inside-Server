@@ -7,6 +7,7 @@ from rest_framework import status
 from .models import Post
 from .serializers import *
 
+
 # Create your views here.
 class PostView(APIView):
     def get(self, request: object, pk: int = None) -> Response:

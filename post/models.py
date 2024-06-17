@@ -2,6 +2,7 @@ from django.db import models
 from gallery.models import Gallery
 import uuid
 
+
 # Create your models here.
 class Post(models.Model):
     id = models.AutoField(primary_key=True)
