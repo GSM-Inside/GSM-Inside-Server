@@ -1,6 +1,6 @@
-FROM python:3.12
+FROM python:3.11
 
-RUN apt-get -y update && apt-get -y install vim && apt-get clean
+RUN apt-get -y update
 RUN mkdir /app
 ADD . /app
 
