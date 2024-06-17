@@ -1,15 +1,13 @@
-from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
-from django.http import FileResponse
 from .models import Image
 from django.core.files.storage import default_storage
 from config import settings
-from config.settings import AWS_STORAGE_BUCKET_NAME, AWS_S3_INSTANCE_URL
-import magic
+from config.settings import AWS_S3_INSTANCE_URL
 import os
 import uuid
+
 
 # Create your views here.
 class ImageView(APIView):
