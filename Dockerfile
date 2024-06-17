@@ -1,10 +1,15 @@
+#
+#   Dockerfile for develop server
+#
+
 FROM python:3.11
 
-RUN apt-get -y update
-RUN mkdir /app
-ADD . /app
-
 WORKDIR /app
+
+COPY ~/.env .
+
+RUN apt-get -y update
+
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
