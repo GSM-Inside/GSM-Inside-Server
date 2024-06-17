@@ -6,7 +6,7 @@ FROM python:3.11
 
 WORKDIR /app
 
-COPY ~/.env .
+COPY /home/ubuntu/.env /app/.env
 
 RUN apt-get -y update
 
