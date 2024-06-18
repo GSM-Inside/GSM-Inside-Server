@@ -21,6 +21,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            ls
-            ls -all /app
-            /app/.cd.sh
+            /app/.cd.sh || true
