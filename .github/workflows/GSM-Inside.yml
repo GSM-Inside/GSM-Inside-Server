@@ -30,8 +30,8 @@ jobs:
     - name: Set dotenv
       run: |
         touch .env
-        echo API_KEY=${{ secrets.SECRET_KEY }} >> .env
-        echo API_KEY=${{ secrets.DB_NAME }} >> .env
+        echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
+        echo DB_NAME=${{ secrets.DB_NAME }} >> .env
 
     - name: Run Tests
       run: |
