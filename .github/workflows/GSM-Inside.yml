@@ -40,27 +40,25 @@ jobs:
       uses: sarisia/actions-status-discord@v1
       if: ${{ success() }}
       with:
-        title: ${{ secrets.SUCCESS_TITLE }}
+        title: CI 성공이Ye~
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
         status: ${{ job.status }}
         image: ${{ secrets.SUCCESS_IMAGE }}
-        description: ${{ secrets.SUCCESS_DESC }}
         color: 0000CD
         url: "https://github.com/sarisia/actions-status-discord"
-        username: ${{ secrets.USERNAME }}
+        username: Ye~
 
     - name: webhook
       uses: sarisia/actions-status-discord@v1
       if: ${{ failure() }}
       with:
-        title: ${{ secrets.FAIL_TITLE }}
+        title: CI 실패Ye요..
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
         status: ${{ job.status }}
         image: ${{ secrets.FAILED_IMAGE }}
-        description: ${{ secrets.FAIL_DESC }}
         color: 00FF00
         url: "https://github.com/sarisia/actions-status-discord"
-        username: ${{ secrets.USERNAME }}
+        username: Ye~
 
 
   deploy:
@@ -79,3 +77,27 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             /app/.cd.sh || true
+
+      - name: webhook
+        uses: sarisia/actions-status-discord@v1
+        if: ${{ success() }}
+        with:
+          title: CD 성공이Ye~
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          status: ${{ job.status }}
+          image: ${{ secrets.SUCCESS_IMAGE }}
+          color: 0000CD
+          url: "https://github.com/sarisia/actions-status-discord"
+          username: Ye~
+
+      - name: webhook
+        uses: sarisia/actions-status-discord@v1
+        if: ${{ failure() }}
+        with:
+          title: CD 실패Ye요...
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          status: ${{ job.status }}
+          image: ${{ secrets.FAILED_IMAGE }}
+          color: 00FF00
+          url: "https://github.com/sarisia/actions-status-discord"
+          username: Ye~
