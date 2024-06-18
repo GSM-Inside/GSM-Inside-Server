@@ -12,13 +12,23 @@ from .serializers import *
 class PostView(APIView):
     def get(self, request: object, pk: int = None) -> Response:
         query: int = request.query_params.get('gallery')
+        orderby: int = request.query_params.get('orderby')
 
         if pk:
             serializer = PostSerializer(instance=get_object_or_404(Post, pk=pk))
-        elif query:
-            serializer = PostTitleSerializer(instance=Post.objects.filter(gallery=query), many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+
+        if query:
+            obj = get_object_or_404(Post, query=query)
         else:
-            serializer = PostTitleSerializer(instance=Post.objects.order_by('-date'), many=True)
+            obj = get_object_or_404(Post)
+
+        if orderby == 'latest':
+            obj = obj.order_by('-date')
+            serializer = PostTitleSerializer(instance=obj, many=True)
+        elif orderby == 'fame':
+            obj = obj.order_by('like', 'view', 'dislike')
+            serializer = PostTitleSerializer(instance=obj, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request: object) -> Response:
