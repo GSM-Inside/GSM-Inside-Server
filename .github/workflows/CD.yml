@@ -22,5 +22,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             ls
-            ll /app
+            ls -all /app
             /app/.cd.sh
