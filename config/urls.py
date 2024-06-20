@@ -20,9 +20,9 @@ from .settings import BASE_URL
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(BASE_URL+'bucket/', include('common.urls')),
+    path('bucket/', include('common.urls')),
 
-    path(BASE_URL+'post/', include('post.urls')),
-    path(BASE_URL+'gallery/', include('gallery.urls')),
-    path(BASE_URL+'comment/', include('comment.urls')),
+    path('post/', include('post.urls')),
+    path('gallery/', include('gallery.urls')),
+    path('comment/', include('comment.urls')),
 ]
