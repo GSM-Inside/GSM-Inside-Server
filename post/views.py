@@ -19,9 +19,9 @@ class PostView(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
 
         if query:
-            obj = get_object_or_404(Post, query=query)
+            obj = Post.objects.filter(gallery=query)
         else:
-            obj = get_object_or_404(Post)
+            obj = Post.objects.all()
 
         if orderby == 'latest':
             obj = obj.order_by('-date')

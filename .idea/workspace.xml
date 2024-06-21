@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8707f648-85bc-4ffb-a05d-6c85d76a65bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +96,7 @@
       <workItem from="1718773209462" duration="7627000" />
       <workItem from="1718804610390" duration="211000" />
       <workItem from="1718871943222" duration="9376000" />
-      <workItem from="1718946365805" duration="3553000" />
+      <workItem from="1718946365805" duration="4257000" />
     </task>
     <servers />
   </component>
