@@ -18,7 +18,7 @@ class Post(models.Model):
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return  f"{self.gallery.name} {self.title}"
+        return f"{self.gallery.name} {self.title}"
 
 
 class Image(models.Model):

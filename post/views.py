@@ -25,10 +25,11 @@ class PostView(APIView):
 
         if orderby == 'latest':
             obj = obj.order_by('-date')
-            serializer = PostTitleSerializer(instance=obj, many=True)
+
         elif orderby == 'fame':
             obj = obj.order_by('like', 'view', 'dislike')
-            serializer = PostTitleSerializer(instance=obj, many=True)
+
+        serializer = PostTitleSerializer(instance=obj, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request: object) -> Response:
