@@ -23,7 +23,7 @@ class GalleryView(APIView):
 
 class GalleryRequestView(APIView):
     def post(self, request: object) -> Response:
-        serializer = GallerySerializer(data=request.data)
+        serializer = GalleryRequestSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)

@@ -12,9 +12,9 @@ class GallerySerializer(serializers.ModelSerializer):
         }
 
 
-class GalleryReadOnlySerializer(serializers.ModelSerializer):
+class GalleryRequestSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Gallery
+        model = GalleryRequest
         fields = '__all__'
 
         extra_kwargs = {
